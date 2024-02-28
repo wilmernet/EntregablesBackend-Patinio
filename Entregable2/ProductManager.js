@@ -39,18 +39,18 @@ class ProductManager{
     async addProduct(productRecived) {  
         try{                        
             this.products=await this.getData();                                    
-            const {title,description,price,thumbnail,code,stock}=productRecived;        
-            if (this.products.find(product => product.code === code)) {
-                return console.error(`Se produjo un error al intentar agregar el producto con código ${code}, ya existe un producto con este código.`)                
+            //const {title,description,price,thumbnail,code,stock}=productRecived;        
+            if (this.products.find(product => product.code === productRecived.code)) {
+                return console.error(`Se produjo un error al intentar agregar el producto con código ${productRecived.code}, ya existe un producto con este código.`)                
             }else{
                 const newProduct = {
                     id: this.#id++,        
-                    title,// (nombre del producto)
-                    description,// (descripción del producto)
-                    price,// (precio)
-                    thumbnail,// (ruta de imagen)
-                    code,// (código identificador)
-                    stock,// (número de piezas disponibles)
+                    title: productRecived.title ?? "Sin título",// (nombre del producto)
+                    description: productRecived.description ?? "Sin descripcion",// (descripción del producto)
+                    price: productRecived.price ?? 0,// (precio)
+                    thumbnail: productRecived.thumbnail ?? "Sin imagen",// (ruta de imagen)
+                    code: productRecived.code ?? "000AAA",// (código identificador)
+                    stock: productRecived.stock ?? 0,// (número de piezas disponibles)
                 };  
                 this.products.push(newProduct);
                 console.warn("datos",this.products);
@@ -146,7 +146,8 @@ class ProductManager{
 
 //   ----------------------   TEST    -----------------------
 
-let path="./prueba.txt";
+let path=`${__dirname}/prueba.txt`;
+
 const instanceManager = new ProductManager(path);
 
 const test= async()=>{
