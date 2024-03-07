@@ -1,8 +1,4 @@
-
-//   ----------------------   CLASS    -----------------------
-
-const { warn, error } = require("console");
-const fs= require( "fs" );
+import fs from  'fs';
 
 //----------------- CLASS ----------------------
 
@@ -13,11 +9,13 @@ class ProductManager{
     constructor(path){
         this.path=path;
         this.products=[]; 
-        try{
-            this.setData(this.products)        
-        }catch(error){
-            console.error(`No fué posible crear el archivo ${this.path}`)
-        }       
+        if(!fs.existsSync(path)){
+            try{
+                this.setData(this.products)        
+            }catch(error){
+                console.error(`No fué posible crear el archivo ${this.path}`)
+            }       
+        }
     }
 
     async getData(){
@@ -74,10 +72,10 @@ class ProductManager{
 
     async getProductById(id) {
         try{
-            this.products=await this.getData();            
-            const product = this.products.find(product => product.id === id);            
+            this.products=await this.getData();                  
+            const product = this.products.find(product => product.id === parseInt(id));            
             if (!product) {
-                console.error(`NO SE ENCUENTRA un producto con el ID: ${id}`);
+                return console.error(`NO SE ENCUENTRA un producto con el ID: ${id}`);
             }else{
                 return product;
             }
@@ -144,89 +142,36 @@ class ProductManager{
 
 
 
-//   ----------------------   TEST    -----------------------
+//   ----------------------   CREATE 10 PRODUCTS FOR SERVER TEST   -----------------------
 
-let path=`${__dirname}/savedProducts.txt`;
+// let path=`src/savedProducts.json`;
 
-const instanceManager = new ProductManager(path);
+// const instanceManager = new ProductManager(path);
 
-const test= async()=>{
-    try{
-        const productData={
-            title: "producto prueba",
-            description: "Este es un producto prueba",
-            price: 200,
-            thumbnail: "Sin imagen",
-            code: "abc123",
-            stock: 25
-        }; 
-        const productData2={
-            title: "producto prueba",
-            description: "Este es otro producto prueba",
-            price: 200,
-            thumbnail: "Sin imagen",
-            code: "xxx111",
-            stock: 25
-        };
-        const productData3={
-            title: "producto prueba",
-            description: "Este es otro producto prueba",
-            price: 200,
-            thumbnail: "Sin imagen",
-            code: "yyy222",
-            stock: 25
-        };         
-    
-        console.log('TEST: getProducts() [sin productos]...\n');
-        console.log(await instanceManager.getProducts());
-        console.log("\n=============================================\n");
-        console.log('TEST: addProduct() [Pasando los datos de prueba]...\n');
-        console.log(await instanceManager.addProduct(productData));    
-        console.log("\n=============================================\n");        
-        console.log('TEST: addProduct() [Pasando los datos de prueba]...\n');
-        console.log(await instanceManager.addProduct(productData2));    
-        console.log("\n=============================================\n");        
-        console.log('TEST: addProduct() [Pasando los datos de prueba]...\n');
-        console.log(await instanceManager.addProduct(productData3));    
-        console.log("\n=============================================\n");        
-        console.log('TEST: addProduct() [Pasando los datos de prueba del 4 al 12]...\n');
-        for (let index = 4; index <=12 ; index++) {
-            console.log(await instanceManager.addProduct(
-                {
-                    title: `producto prueba ${index}`,
-                    description: `Este es un producto de prueba ${index}`,
-                    price: 200,
-                    thumbnail: "Sin imagen",
-                    code: `abc123_${index}`,
-                    stock: 25
-                }
-            ));    
-        }        
-        console.log("\n=============================================\n");        
-        console.log('TEST: addProduct() [Pasando datos de prueba con el mismo CODE]...\n');
-        console.log(await instanceManager.addProduct(productData));    
-        console.log("\n=============================================\n");        
-        console.log('TEST: getProducts() [Con productos creados]...');
-        console.log(await instanceManager.getProducts());
-        console.log("\n=============================================\n");        
-        console.log('TEST: getProductById() [Con el id=1]...');
-        console.log(await instanceManager.getProductById(1));     
-        console.log("\n=============================================\n");        
-        console.log('TEST: getProductById() [Con el id=8 (No existe)]...');
-        console.log(await instanceManager.getProductById(8));       
-        console.log("\n=============================================\n");        
-        console.log('TEST: updateProducts() [Actualización del título del producto existente ID: 2]...');
-        console.log(await instanceManager.updateProduct(2,{title:"título Modificado"}));   
-        console.log("\n=============================================\n");        
-        console.log('TEST: deleteProducts() [Borrando el producto con ID=3]...');
-        console.log(await instanceManager.deleteProduct(3)); 
-        console.log("\n=============================================\n");        
+// const test= async()=>{
+//     try{        
+//         for (let index = 1; index <=10 ; index++) {
+//             console.log(await instanceManager.addProduct(
+//                 {
+//                     title: `producto prueba ${index}`,
+//                     description: `Este es un producto de prueba ${index}`,
+//                     price: 200,
+//                     thumbnail: "Sin imagen",
+//                     code: `abc123_${index}`,
+//                     stock: 25
+//                 }
+//             ));    
+//         }        
+//         console.log("\n=============================================\n");        
+//         console.log('TEST: getProducts() [Con productos creados]...');
+//         console.log(await instanceManager.getProducts());
+//         console.log("\n=============================================\n");        
+//     }catch (error) {
+//         console.error(error.message);
+//     }
 
-           
-    }catch (error) {
-        console.error(error.message);
-    }
+// }
 
-}
+// test();
 
-//test();
+export default ProductManager;
