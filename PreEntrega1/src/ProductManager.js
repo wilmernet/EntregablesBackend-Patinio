@@ -4,7 +4,7 @@ import fs from  'fs';
 
 class ProductManager{
 
-    #id=1; //Inicialización de ID
+   // #id=1; //Inicialización de ID
     
     constructor(path){
         this.path=path;
@@ -42,13 +42,16 @@ class ProductManager{
                 return console.error(`Se produjo un error al intentar agregar el producto con código ${productRecived.code}, ya existe un producto con este código.`)                
             }else{
                 const newProduct = {
-                    id: this.#id++,        
+                    //id: this.#id++,        
+                    id: this.products.length>0?this.products[this.products.length-1].id++:1, //asigna el entero siguiente al id del último producto creado, si no hay productos asigna id=1       
                     title: productRecived.title,// (nombre del producto)
                     description: productRecived.description,// (descripción del producto)
                     price: productRecived.price ?? 0,// (precio)
-                    thumbnail: productRecived.thumbnail ?? "Sin imagen",// (ruta de imagen)
-                    code: productRecived.code,// (código identificador)
+                    status: productRecived.status,
                     stock: productRecived.stock ?? 0,// (número de piezas disponibles)
+                    category: productRecived.category,// (categoría a la que pertene
+                    thumbnail: productRecived.thumbnail ?? [],// (ruta de imagen)
+                    code: productRecived.code,// (código identificador)
                 };  
                 this.products.push(newProduct);
                 console.warn("datos",this.products);
@@ -139,39 +142,5 @@ class ProductManager{
     }
 
 }
-
-
-
-//   ----------------------   CREATE 10 PRODUCTS FOR SERVER TEST   -----------------------
-
-// let path=`src/savedProducts.json`;
-
-// const instanceManager = new ProductManager(path);
-
-// const test= async()=>{
-//     try{        
-//         for (let index = 1; index <=10 ; index++) {
-//             console.log(await instanceManager.addProduct(
-//                 {
-//                     title: `producto prueba ${index}`,
-//                     description: `Este es un producto de prueba ${index}`,
-//                     price: 200,
-//                     thumbnail: "Sin imagen",
-//                     code: `abc123_${index}`,
-//                     stock: 25
-//                 }
-//             ));    
-//         }        
-//         console.log("\n=============================================\n");        
-//         console.log('TEST: getProducts() [Con productos creados]...');
-//         console.log(await instanceManager.getProducts());
-//         console.log("\n=============================================\n");        
-//     }catch (error) {
-//         console.error(error.message);
-//     }
-
-// }
-
-// test();
 
 export default ProductManager;

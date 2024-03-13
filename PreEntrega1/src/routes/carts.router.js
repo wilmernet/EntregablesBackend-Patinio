@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
         const carts = await cartManager.getCarts();
         res.status(201).send(carts);
     } catch (error) {
-        return res.status(500).send({ error: 'Error interno del servidor' });
+        return res.status(500).send({ error: `Error en el servidor` });
     }
 });
 
@@ -20,23 +20,23 @@ router.get('/:cartId', async (req, res) => {
         const cartId = req.params.cartId;
         const cart  = await cartManager.getCartById(cartId);
         if (!cart){
-            return res.status(400).send({error: 'No existe un carrito con el ID especificado'});
+            return res.status(400).send({error: `No existe un carrito con el ID ${cartId}`});
         }
         else {
             const productsInCart = await cartManager.getProductsInCart(cart);
             return res.status(200).send(productsInCart);
         }
     } catch (error) {
-       return res.status(500).send({ error: 'Error interno del servidor' })
+       return res.status(500).send({ error: `Error en el servidor` })
     }
 });
 
 router.post('/', async (req, res) => {
     try {
         await manager.createCart();
-        res.status(201).send({ message: 'Carrito creado' });
+        res.status(201).send({ message: `Carrito creado exitosamente` });
     } catch (error) {
-        return res.status(500).send({ error: 'Error interno del servidor' });
+        return res.status(500).send({ error: `Error en el servidor` });
     }
 });
 
@@ -49,17 +49,17 @@ router.post('/:cartId/product/:productId', async (req, res) => {
         const productToAdd = await productManager.getProductById(productId);
 
         if (!productToAdd){
-            return res.status(400).send({error: 'No existe el producto'});
+            return res.status(400).send({error: `No se encontró el producto con id ${productId}`});
         }
         if (!cart){
-            return res.status(400).send({error: 'No existe el carrito'});
+            return res.status(400).send({error: `No existe un carrito con el ID ${cartId}`});
         }
 
         await cartManager.addProductToCart(cart, productToAdd, 1);
-        return res.status(200).send({message: 'Producto añadido al carrito'});
+        return res.status(200).send({message: 'Producto agregado al carrito de forma exitosa'});
 
     } catch (error) {
-        return res.status(500).send({ error: 'Error interno del servidor' });
+        return res.status(500).send({ error: `Error en el servidor` });
     }
 });
 

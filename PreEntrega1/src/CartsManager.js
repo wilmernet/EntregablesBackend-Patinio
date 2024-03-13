@@ -4,24 +4,14 @@ class CartsManager {
     constructor(path) {
         this.carts = [];
         this.path = path;
-    }
-
-    async generateId() {
-        const carts = await this.getCarts();
-
-        if (carts.length > 0) {
-            return parseInt(carts[carts.length - 1].id + 1);
-        } else {
-            return 1;
-        }
-    }
+    }    
 
     async createCart() {
         try {
             this.carts = await this.getCarts();
 
             const cart = {
-                id: await this.generateId(),
+                id: this.carts.length>0?parseInt(this.carts[this.carts.length-1].id)++:1,
                 products: [],
             }
 
