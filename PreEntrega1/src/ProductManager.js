@@ -43,7 +43,7 @@ class ProductManager{
             }else{
                 const newProduct = {
                     //id: this.#id++,        
-                    id: this.products.length>0?this.products[this.products.length-1].id++:1, //asigna el entero siguiente al id del último producto creado, si no hay productos asigna id=1       
+                    id: await this.products.length>0?parseInt(this.products[this.products.length-1].id)++:1, //asigna el entero siguiente al id del último producto creado, si no hay productos asigna id=1       
                     title: productRecived.title,// (nombre del producto)
                     description: productRecived.description,// (descripción del producto)
                     price: productRecived.price ?? 0,// (precio)

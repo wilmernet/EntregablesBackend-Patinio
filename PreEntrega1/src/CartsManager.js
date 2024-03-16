@@ -11,7 +11,7 @@ class CartsManager {
             this.carts = await this.getCarts();
 
             const cart = {
-                id: this.carts.length>0?parseInt(this.carts[this.carts.length-1].id)++:1,
+                id: this.carts.length>0?parseInt(this.carts[this.carts.length-1].id)+1:1,
                 products: [],
             }
 
