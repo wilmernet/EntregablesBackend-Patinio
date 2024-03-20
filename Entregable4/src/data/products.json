@@ -1,0 +1,112 @@
+[
+	{		
+		"id": 1,
+		"title": "producto prueba 1",
+		"description": "Este es un producto de prueba 1",
+		"price": 200,
+		"status":true,
+		"stock": 25,
+		"category":"categoria1",
+		"thumbnail": [],
+		"code": "abc123_1"
+	},
+	{
+		"id": 2,
+		"title": "producto prueba 2",
+		"description": "Este es un producto de prueba 2",
+		"price": 200,
+		"status":true,
+		"stock": 25,
+		"category":"categoria1",
+		"thumbnail": [],
+		"code": "abc123_2"
+	},
+	{
+		"id": 3,
+		"title": "producto prueba 3",
+		"description": "Este es un producto de prueba 3",
+		"price": 200,
+		"status":true,
+		"stock": 25,
+		"category":"categoria1",
+		"thumbnail": [],
+		"code": "abc123_3"
+	},
+	{
+		"id": 4,
+		"title": "producto prueba 4",
+		"description": "Este es un producto de prueba 4",
+		"price": 200,
+		"status":true,
+		"stock": 25,
+		"category":"categoria2",
+		"thumbnail": [],
+		"code": "abc123_4"
+	},
+	{
+		"id": 5,
+		"title": "producto prueba 5",
+		"description": "Este es un producto de prueba 5",
+		"price": 200,
+		"status":true,
+		"stock": 25,
+		"category":"categoria2",
+		"thumbnail": [],
+		"code": "abc123_5"
+	},
+	{
+		"id": 6,
+		"title": "producto prueba 6",
+		"description": "Este es un producto de prueba 6",
+		"price": 200,
+		"status":true,
+		"stock": 25,
+		"category":"categoria3",
+		"thumbnail": [],
+		"code": "abc123_6"
+	},
+	{
+		"id": 7,
+		"title": "producto prueba 7",
+		"description": "Este es un producto de prueba 7",
+		"price": 200,
+		"status":true,
+		"stock": 25,
+		"category":"categoria3",
+		"thumbnail": [],
+		"code": "abc123_7"
+	},
+	{
+		"id": 8,
+		"title": "producto prueba 8",
+		"description": "Este es un producto de prueba 8",
+		"price": 200,
+		"status":true,
+		"stock": 25,
+		"category":"categoria4",
+		"thumbnail": [],
+		"code": "abc123_8"
+	},
+	{
+		"id": 9,
+		"title": "producto prueba 9",
+		"description": "Este es un producto de prueba 9",
+		"price": 200,
+		"status":true,
+		"stock": 25,
+		"category":"categoria4",
+		"thumbnail": [],
+		"code": "abc123_9"
+	},
+	{
+		"id": 10,
+		"title": "producto prueba 10",
+		"description": "Este es un producto de prueba 10",
+		"price": 200,
+		"status":true,
+		"stock": 25,
+		"category":"categoria4",
+		"thumbnail": [],
+		"code": "abc123_10"
+	}
+]
