@@ -1,112 +1,113 @@
 [
 	{		
 		"id": 1,
-		"title": "producto prueba 1",
-		"description": "Este es un producto de prueba 1",
-		"price": 200,
+		"title": "RINGO X 1KG",
+		"description": "Ringo Croquetas satisface las necesidades nutricionales de los perros adultos. Es un alimento apto para perros de todas las razas, especialmente aquellos dedicados a las tareas del campo, ya que es una buena fuente de energía.",
+		"price": 10000,
 		"status":true,
 		"stock": 25,
-		"category":"categoria1",
-		"thumbnail": [],
-		"code": "abc123_1"
+		"category":"PERROS",
+		"thumbnail": ["\\img\\products\\DOG_ringo-adultos.png"],
+		"code": "DOG-001"
 	},
 	{
 		"id": 2,
-		"title": "producto prueba 2",
-		"description": "Este es un producto de prueba 2",
-		"price": 200,
+		"title": "BIRBO PREMIUM X 10KG",
+		"description": "Birbo Premium Carne es un alimento nutricionalmente completo para perros adultos. El uso de ingredientes seleccionados, omegas 6 y 3 y sin aromatizantes artificiales, proporcionando una alimentación balanceada enriquecida con vitaminas y minerales, esenciales para la buena salud de su perro. Contiene extracto de Yucca Schidigera, que actúa en nivel intestinal, mejorando la absorción de nutrientes y reduciendo el olor de la materia fecal.",
+		"price": 150000,
 		"status":true,
-		"stock": 25,
-		"category":"categoria1",
-		"thumbnail": [],
-		"code": "abc123_2"
+		"stock": 20,
+		"category":"PERROS",
+		"thumbnail": ["\\img\\products\\DOG_birbocarne.png"],
+		"code": "DOG-002"
 	},
 	{
 		"id": 3,
-		"title": "producto prueba 3",
-		"description": "Este es un producto de prueba 3",
-		"price": 200,
+		"title": "CHUNKY ARROS Y POLLO X 2KG",
+		"description": "El concentrado para perros adultos Chunky pollo y arroz es una excelente opción de alimentación saludable para tu perro. Su fuente principal de proteína viene del pollo y es un alimento fabricado  bajo exigentes normas de calidad que proporcionará una nutrición completa y balanceada a tu perro adulto. Gracias a sus altos niveles de nutrientes como vitaminas, minerales, antioxidantes, ácidos grasos omegas, entre otros; Este concentrado contribuirá a la buena salud en general y al mantenimiento de la piel y el pelaje.",
+		"price": 40000,
 		"status":true,
 		"stock": 25,
-		"category":"categoria1",
-		"thumbnail": [],
-		"code": "abc123_3"
+		"category":"PERROS",
+		"thumbnail": ["\\img\\products\\DOG_Chunky-Adultos-Pollo.jpeg"],
+		"code": "DOG-003"
 	},
 	{
 		"id": 4,
-		"title": "producto prueba 4",
-		"description": "Este es un producto de prueba 4",
-		"price": 200,
+		"title": "DOGOURMET ADULTOS X 2KG",
+		"description": "DOGOURMET ADULTOS: Con el sabor a carne a la parrilla que deleitará los paladares de tu consentido, este alimento fue diseñado pensando en la salud, nutrición y deleite de las mascotas adultas.",
+		"price": 45000,
 		"status":true,
 		"stock": 25,
-		"category":"categoria2",
-		"thumbnail": [],
-		"code": "abc123_4"
+		"category":"PERROS",
+		"thumbnail": ["\\img\\products\\DOG_dogourmet_carne.png"],
+		"code": "DOG-004"
 	},
 	{
 		"id": 5,
-		"title": "producto prueba 5",
-		"description": "Este es un producto de prueba 5",
-		"price": 200,
+		"title": "CAT AGLITY-GOLD X 1.5KG",
+		"description": "CAT AGLITY-GOLD Salmón, pollo, harina de vísceras de pollo, arroz, harina de carne, plasma, pulpa de remolacha, aceite de pollo, hidrolizado de hígado de pollo, celulosa, cloruro de colina, cloruro de sodio, bisulfato ácido de sodio, metionina, manano-oligosacáridos, taurina, beta-glucanos, hierro quelado, sulfato ferroso, hidroxicloruro de zinc, zinc quelado, selenio quelado, cobre básico cloruro, cobre quelado, yodato de calcio, hidroxicloruro de manganeso, manganeso quelado, selenito de sodio, vitamina E tocoferol acetato, vitamina A retinol, vitamina B1 tiamina, vitamina B2 riboflavina, vitamina B3 niacinamida, vitamina B5 ácido pantoténico, vitamina B6 piridoxina, vitamina B9 ácido fólico, vitamina B12 cianocobalamina, vitamina H biotina, vitamina K3 menadiona, vitamina D3 colecalciferol, l-carnitina, sales de ácido propiónico, tocoferoles, aceite de romero, ácido cítrico.",
+		"price": 30000,
 		"status":true,
 		"stock": 25,
-		"category":"categoria2",
-		"thumbnail": [],
-		"code": "abc123_5"
+		"category":"GATOS",
+		"thumbnail": ["\\img\\products\\CAT_agility_esterilizado.png"],
+		"code": "CAT-001"
 	},
 	{
 		"id": 6,
-		"title": "producto prueba 6",
-		"description": "Este es un producto de prueba 6",
-		"price": 200,
+		"title": "FELIX X 2KG",
+		"description": "Alimento completo y balanceado para gatitos hasta 12 meses de edad y hembras gestantes o lactantes de todas las razas.",
+		"price": 40000,
 		"status":true,
 		"stock": 25,
-		"category":"categoria3",
-		"thumbnail": [],
-		"code": "abc123_6"
+		"category":"GATOS",
+		"thumbnail": ["\\img\\products\\CAT_FelixAdultoTripleDelicious-e1683572815545.webp"],
+		"code": "CAT-002"
 	},
 	{
 		"id": 7,
-		"title": "producto prueba 7",
-		"description": "Este es un producto de prueba 7",
-		"price": 200,
-		"status":true,
+		"title": "PURINA CAT CHOW X 2KG",
+		"description": "PURINA® CAT CHOW® ADULTOS ACTIVOS SABOR CARNE con FORTI DEFENSE ofrece los nutrientes que tu gato necesita para mantenerse fuerte y saludable. Su fórmula contiene entre sus ingredientes proteínas de la carne, naturalmente ricas en hierro, que lo ayudan a desarrollar músculos fuertes.",
+		"price": 38000,
+		"status":false,
 		"stock": 25,
-		"category":"categoria3",
-		"thumbnail": [],
-		"code": "abc123_7"
+		"category":"GATOS",
+		"thumbnail": ["\\img\\products\\CAT_CatChowAdCarne.webp"],
+		"code": "CAT-003"
 	},
 	{
 		"id": 8,
-		"title": "producto prueba 8",
-		"description": "Este es un producto de prueba 8",
-		"price": 200,
+		"title": "BR FOR RABBIT X 1KG",
+		"description": "Br® For Rabbit es un alimento completo para conejos y animales pequeños, desde el destete hasta adulo. Para conejas en lactancia con sus gazapos el consumo debe dejarse a voluntad.
+		Para hembras gestantes, administrar a razón de 200 g/animal/día.",
+		"price": 20000,
 		"status":true,
 		"stock": 25,
-		"category":"categoria4",
-		"thumbnail": [],
-		"code": "abc123_8"
+		"category":"CONEJOS",
+		"thumbnail": ["\\img\\products\\RABBIT_br-for-Rabbit.jpeg"],
+		"code": "RAB-001"
 	},
 	{
 		"id": 9,
-		"title": "producto prueba 9",
-		"description": "Este es un producto de prueba 9",
-		"price": 200,
+		"title": "CONEJINA X 1KG",
+		"description": "Concentrado Genérico para Conejos",
+		"price": 8000,
 		"status":true,
 		"stock": 25,
-		"category":"categoria4",
-		"thumbnail": [],
-		"code": "abc123_9"
+		"category":"CONEJOS",
+		"thumbnail": ["\\img\\products\\RABBIT_Conejina1kg.png"],
+		"code": "RAB-002"
 	},
 	{
 		"id": 10,
-		"title": "producto prueba 10",
-		"description": "Este es un producto de prueba 10",
-		"price": 200,
+		"title": "PIAMONTINA HAMSTER X 250GR",
+		"description": "Semillas para hamsters enriquecidas con vitaminas",
+		"price": 5000,
 		"status":true,
 		"stock": 25,
-		"category":"categoria4",
-		"thumbnail": [],
-		"code": "abc123_10"
+		"category":"HAMSTERS",
+		"thumbnail": ["\\img\\products\\HAMSTER-210114_Chrome-600x867.jpeg"],
+		"code": "HAM-001"
 	}
 ]
