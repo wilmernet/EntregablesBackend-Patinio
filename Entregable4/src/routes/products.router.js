@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import ProductManager from '../managers/ProductManager.js';
+import { uploader } from '../utils.js';
 
 const router = Router();
 const manager = new ProductManager('src/data/products.json')
@@ -32,18 +33,22 @@ router.get('/:productId', async (req, res) => {
 
 });
 
-router.post('/', async (req, res) => {
+
+router.post('/',uploader.single('file'), async (req, res) => {
     try {
-        const { title, description, code, price, status, stock, category, thumbnail } = req.body;
+        const { title, description, code, price, status, stock, category, thumbnail } = req.body;        
         const existingProducts = await manager.getProducts();
 
         if (existingProducts.find(product => product.code === code)) {
             return res.status(400).send({ error: `Ya existe un producto con el código ${code}` });
         }
-        if (!title || !description || !code || !price || !stock || !category || !thumbnail) {
+        if(!req.file){
+            return res.status(400).send({ error: `No se logrò cargar la imagen` });
+        }
+        if (!title || !description || !code || !price || !stock || !category) {
            return res.status(400).send({ error: `Falta información para registrar un nuevo producto` });
         }
-
+        req.body.thumbnail=req.file.path;
         await manager.addProduct(req.body);
         return res.status(201).send({ message: `${title} añadido con éxito` });
     } catch (error) {

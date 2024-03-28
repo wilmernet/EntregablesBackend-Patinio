@@ -1,5 +1,55 @@
-<div class="content">    
+<div class="content">        
     <h1>ADMINISTRACIÓN DE PRODUCTOS</h1>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form>
+                    <h2>Nuevo Producto</h2>
+                    <div class="inputbox"> 
+                        <ion-icon name="create-outline"></ion-icon> 
+                        <input type="text" required name="title">
+                        <label>Título</label>
+                    </div>
+                    <div class="inputbox"> 
+                        <ion-icon name="newspaper-outline"></ion-icon>
+                        <input type="text" required name="description">
+                        <label>Descripción</label>
+                    </div>
+                    <div class="inputbox"> 
+                        <ion-icon name="cash-outline"></ion-icon> 
+                        <input type="number" required name="price">
+                        <label>Precio</label>
+                    </div>
+                    <div class="inputbox"> 
+                        <ion-icon name="layers-outline"></ion-icon>
+                        <input type="number" required name="stock">
+                        <label>Stock</label>
+                    </div>
+                    <div class="inputbox"> 
+                        <ion-icon name="list-outline"></ion-icon>
+                        <input type="text" required name="category">
+                        <label>Categoría</label>
+                    </div>
+                    <div class="inputbox"> 
+                        <ion-icon name="key-outline"></ion-icon>
+                        <input type="text" required name="code">
+                        <label>Código</label>
+                    </div>
+                    <div class="forget">
+                        <input type="file" required>                        
+                    </div>
+                    <div class="forget">
+                        <label><input type="checkbox" name="status">Activo</label> 
+                    </div>
+                    {{!-- <div class="inputbox"> 
+                        <ion-icon name="lock-closed-outline"></ion-icon> <input type="password" required> 
+                        <label>Password</label> 
+                    </div> --}}                    
+                    <button id="addButton">Agregar</button>                    
+                </form>
+            </div>
+        </div>
+    </section> 
     <div class="cards-products"> 
         {{#each products}}
         <div class="card-product">
@@ -11,7 +61,7 @@
                 <p class="card-product__price">COP$ {{this.price}} </p>
             </div>
             <div class="card-product__btn">
-                <button>VER</button>
+                <button><ion-icon name="trash-outline"></ion-icon></button>
             </div>
         </div>
         {{/each}}

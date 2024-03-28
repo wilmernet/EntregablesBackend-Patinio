@@ -23,7 +23,7 @@
 	},
 	{
 		"id": 3,
-		"title": "CHUNKY ARROS Y POLLO X 2KG",
+		"title": "CHUNKY ARROZ Y POLLO X 2KG",
 		"description": "El concentrado para perros adultos Chunky pollo y arroz es una excelente opción de alimentación saludable para tu perro. Su fuente principal de proteína viene del pollo y es un alimento fabricado  bajo exigentes normas de calidad que proporcionará una nutrición completa y balanceada a tu perro adulto. Gracias a sus altos niveles de nutrientes como vitaminas, minerales, antioxidantes, ácidos grasos omegas, entre otros; Este concentrado contribuirá a la buena salud en general y al mantenimiento de la piel y el pelaje.",
 		"price": 40000,
 		"status":true,
@@ -84,7 +84,7 @@
 		"status":true,
 		"stock": 25,
 		"category":"CONEJOS",
-		"thumbnail": ["\\img\\products\\RABBIT_br-for-Rabbit.jpeg"],
+		"thumbnail": ["\\img\\products\\RABBIT_br-for-Rabbit.png"],
 		"code": "RAB-001"
 	},
 	{
@@ -106,7 +106,7 @@
 		"status":true,
 		"stock": 25,
 		"category":"HAMSTERS",
-		"thumbnail": ["\\img\\products\\HAMSTER-210114_Chrome-600x867.jpeg"],
+		"thumbnail": ["\\img\\products\\HAMSTER-210114_Chrome-600x867.png"],
 		"code": "HAM-001"
 	}
 ]

@@ -1,7 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+h1{
+    margin: 20px;
+}
+
 body{
     color: #5D4E42;
     background-color: #EDE0D8;    
 }
+
+
 
 .content{
     display: flex;
@@ -13,7 +26,7 @@ body{
 .cards-products{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: space-around;
     padding: 30px;
     
@@ -35,9 +48,20 @@ body{
 .card-product__price{
     color: #479479;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin: 10px;
 }
 
 .card-product__img_file{
     max-height: 200px;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+}
+
+button ion-icon{
+    font-size: 1.5em;
 }
