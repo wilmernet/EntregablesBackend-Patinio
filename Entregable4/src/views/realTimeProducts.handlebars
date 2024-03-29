@@ -3,11 +3,12 @@
     <section>
         <div class="form-box">
             <div class="form-value">
-                <form>
+                {{!-- <form action="realtimeproducts" method="post" enctype="multipart/form-data" id="newProductForm"> --}}
+                <form id="newProductForm">
                     <h2>Nuevo Producto</h2>
                     <div class="inputbox"> 
                         <ion-icon name="create-outline"></ion-icon> 
-                        <input type="text" required name="title">
+                        <input type="text" required name="title">                        
                         <label>Título</label>
                     </div>
                     <div class="inputbox"> 
@@ -36,16 +37,12 @@
                         <label>Código</label>
                     </div>
                     <div class="forget">
-                        <input type="file" required>                        
+                        <input type="file" required name="file">                        
                     </div>
                     <div class="forget">
-                        <label><input type="checkbox" name="status">Activo</label> 
-                    </div>
-                    {{!-- <div class="inputbox"> 
-                        <ion-icon name="lock-closed-outline"></ion-icon> <input type="password" required> 
-                        <label>Password</label> 
-                    </div> --}}                    
-                    <button id="addButton">Agregar</button>                    
+                        <label><input type="checkbox" name="status" checked>Activo</label> 
+                    </div>                 
+                    <button id="addButton" type="submit">Agregar</button>                    
                 </form>
             </div>
         </div>
@@ -61,9 +58,12 @@
                 <p class="card-product__price">COP$ {{this.price}} </p>
             </div>
             <div class="card-product__btn">
-                <button><ion-icon name="trash-outline"></ion-icon></button>
+                <button class="deleteBotton" id={{this.id}}><ion-icon name="trash-outline"></ion-icon></button>
             </div>
         </div>
         {{/each}}
     </div>
 </div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTimeProducts.js"></script>

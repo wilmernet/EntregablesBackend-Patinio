@@ -54,6 +54,7 @@ body{
 
 .card-product__img_file{
     max-height: 200px;
+    max-width: 99%;
 }
 
 button{
