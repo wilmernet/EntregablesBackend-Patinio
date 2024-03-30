@@ -26,13 +26,15 @@ const io = new Server(httpServer)
 io.on('connection', socket => {
     console.log('Nuevo cliente conectado');
 
-    socket.on('createProduct', data => {
-        io.emit('newProductAddedToDOM', data);
+    socket.on('newProductCreated', data => {        
+        console.log("Producto agregado",data);
+        io.emit('newProductToDOM', data);
     })
 
-    // socket.on('productDeleted', data => {
-    //     io.emit('productDeletedOfDOM', data);
-    // } )
+    socket.on('productDeleted', data => {
+        console.log("La id eliminada es",data);
+        io.emit('productDeletedToDOM', data);
+    } )
 })
 
 //================ MOTOR DE PLANTILLAS ===================

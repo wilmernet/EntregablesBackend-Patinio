@@ -51,8 +51,9 @@ router.post('/',uploader.single('file'), async (req, res) => {
            return res.status(400).send({ error: `Falta información para registrar un nuevo producto` });
         }
         req.body.thumbnail=req.file.path.substring(7); //se retira "public" de la ruta
-        await manager.addProduct(req.body);
-        return res.status(201).send({ message: `${title} añadido con éxito` });
+        const newProduct=await manager.addProduct(req.body);
+        return res.status(201).send(newProduct);
+        //return res.status(201).send({ message: `${title} añadido con éxito` });
     } catch (error) {
         return res.status(500).send({ error: `Error en el servidor` });
     }
@@ -70,10 +71,10 @@ router.put('/:productId', async (req, res) => {
 
 });
 
-const deleteImageOfProduct=async(productId)=>{
-    let product = await manager.getProductById(productId);
-    const filePath="public/"+product.thumbnail;
+const deleteImageOfProduct=async(productId)=>{    
     try {
+        let product = await manager.getProductById(productId);
+        const filePath="public/"+product.thumbnail; 
         await fs.unlink(filePath);
         console.log("Archivo de imagen eliminado correctamente");
     } catch (err) {
@@ -86,7 +87,8 @@ router.delete('/:productId', async (req, res) => {
         const productId = req.params.productId;        
         deleteImageOfProduct(productId);
         await manager.deleteProduct(parseInt(productId));
-        return res.status(201).send({ message: `Producto eliminado exitosamente` });
+        return res.status(201).send({ idDeleted: productId });
+        //return res.status(201).send({ message: `Producto eliminado exitosamente` });
     } catch (error) {
         return res.status(500).send({ error: `Error en el servidor` });
     }

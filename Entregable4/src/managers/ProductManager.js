@@ -141,6 +141,20 @@ class ProductManager{
         }
     }
 
+    async getLastProduct() {
+        try{
+            this.products=await this.getData(); 
+            let stock=this.products.length;
+            if(stock>0){
+                return this.products[stock-1];
+            }else{
+                throw new Error("No hay productos");
+            }
+        }catch(error){
+            throw new Error(error.message);            
+        }
+    }    
+
 }
 
 export default ProductManager;

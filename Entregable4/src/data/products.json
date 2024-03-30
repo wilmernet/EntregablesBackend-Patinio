@@ -8,7 +8,7 @@
 		"stock": 25,
 		"category": "PERROS",
 		"thumbnail": [
-			"\\img\\products\\DOG_ringo-adultos.png"
+			"img/products/DOG_ringo-adultos.png"
 		],
 		"code": "DOG-001"
 	},
@@ -21,7 +21,7 @@
 		"stock": 20,
 		"category": "PERROS",
 		"thumbnail": [
-			"\\img\\products\\DOG_birbocarne.png"
+			"img/products/DOG_birbocarne.png"
 		],
 		"code": "DOG-002"
 	},
@@ -34,7 +34,7 @@
 		"stock": 25,
 		"category": "PERROS",
 		"thumbnail": [
-			"\\img\\products\\DOG_Chunky-Adultos-Pollo.jpeg"
+			"img/products/DOG_Chunky-Adultos-Pollo.jpeg"
 		],
 		"code": "DOG-003"
 	},
@@ -47,7 +47,7 @@
 		"stock": 25,
 		"category": "PERROS",
 		"thumbnail": [
-			"\\img\\products\\DOG_dogourmet_carne.png"
+			"img/products/DOG_dogourmet_carne.png"
 		],
 		"code": "DOG-004"
 	},
@@ -60,7 +60,7 @@
 		"stock": 25,
 		"category": "GATOS",
 		"thumbnail": [
-			"\\img\\products\\CAT_agility_esterilizado.png"
+			"img/products/CAT_agility_esterilizado.png"
 		],
 		"code": "CAT-001"
 	},
@@ -73,7 +73,7 @@
 		"stock": 25,
 		"category": "GATOS",
 		"thumbnail": [
-			"\\img\\products\\CAT_FelixAdultoTripleDelicious-e1683572815545.webp"
+			"img/products/CAT_FelixAdultoTripleDelicious-e1683572815545.webp"
 		],
 		"code": "CAT-002"
 	},
@@ -86,7 +86,7 @@
 		"stock": 25,
 		"category": "GATOS",
 		"thumbnail": [
-			"\\img\\products\\CAT_CatChowAdCarne.webp"
+			"img/products/CAT_CatChowAdCarne.webp"
 		],
 		"code": "CAT-003"
 	},
@@ -99,7 +99,7 @@
 		"stock": 25,
 		"category": "CONEJOS",
 		"thumbnail": [
-			"\\img\\products\\RABBIT_br-for-Rabbit.png"
+			"img/products/RABBIT_br-for-Rabbit.png"
 		],
 		"code": "RAB-001"
 	},
@@ -112,7 +112,7 @@
 		"stock": 25,
 		"category": "CONEJOS",
 		"thumbnail": [
-			"\\img\\products\\RABBIT_Conejina1kg.png"
+			"img/products/RABBIT_Conejina1kg.png"
 		],
 		"code": "RAB-002"
 	},
@@ -125,7 +125,7 @@
 		"stock": 25,
 		"category": "HAMSTERS",
 		"thumbnail": [
-			"\\img\\products\\HAMSTER-210114_Chrome-600x867.png"
+			"img/products/HAMSTER-210114_Chrome-600x867.png"
 		],
 		"code": "HAM-001"
 	}

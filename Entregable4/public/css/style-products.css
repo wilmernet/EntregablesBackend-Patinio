@@ -57,12 +57,13 @@ body{
     max-width: 99%;
 }
 
-button{
+.deleteBotton{
     width: 100px;
     height: 30px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
-button ion-icon{
-    font-size: 1.5em;
+.deleteBotton ion-icon{
+    font-size: 1.5rem;
 }

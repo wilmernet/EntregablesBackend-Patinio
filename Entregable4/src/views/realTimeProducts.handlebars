@@ -46,21 +46,22 @@
                 </form>
             </div>
         </div>
-    </section> 
-    <div class="cards-products"> 
+    </section>
+    <div class="cards-products" id="container"> 
         {{#each products}}
-        <div class="card-product">
-            <div class="card-product__img"> 
-                <img src="{{this.thumbnail}}" alt="{{this.title}}" class="card-product__img_file">
+            <div class="card-product" id={{this.id}}>
+                <div class="card-product__img"> 
+                    <img src="{{this.thumbnail}}" alt="{{this.title}}" class="card-product__img_file">
+                </div>
+                <div>
+                    <p class="card-product__title">{{this.title}} </p>
+                    <p class="card-product__price">COP$ {{this.price}} </p>
+                </div>
+                <div class="card-product__btn">
+                    <button class="deleteBotton"><ion-icon name="trash-outline"></ion-icon></button>
+                    {{!-- <button class="deleteBotton">Eliminar</button> --}}
+                </div>
             </div>
-            <div>
-                <p class="card-product__title">{{this.title}} </p>
-                <p class="card-product__price">COP$ {{this.price}} </p>
-            </div>
-            <div class="card-product__btn">
-                <button class="deleteBotton" id={{this.id}}><ion-icon name="trash-outline"></ion-icon></button>
-            </div>
-        </div>
         {{/each}}
     </div>
 </div>
