@@ -58,12 +58,16 @@ body{
 }
 
 .deleteBotton{
+    display: inline-block;
     width: 100px;
     height: 30px;
     cursor: pointer;
     border-radius: 5px;
+    color: white;
+    border: outset  #CEB185;;
+    background-color: #5D4E42;
 }
 
 .deleteBotton ion-icon{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }

@@ -69,6 +69,7 @@ const createHTMLnewProduct=(newProduct)=>{
     const botton=document.createElement("botton");
     botton.innerHTML+='<ion-icon name="trash-outline"></ion-icon>';
     botton.className="deleteBotton";
+    botton.id="btnDel"+newProduct.id;
     divCardProduct__btn.appendChild(botton);
     divCardProduct.appendChild(divCardProduct__btn);
     container.appendChild(divCardProduct);
